@@ -27,6 +27,12 @@ public class VarastoTest {
     }
 	
 	@Test
+    public void konstruktoriLuoTyhjanVarastonTilavuudella0() {
+		varasto = new Varasto(-1, -1);
+		assertEquals(0, varasto.getTilavuus(), vertailuTarkkuus);
+    }
+	
+	@Test
     public void konstruktoriLuoVaraston() {
 		varasto = new Varasto(123, 123);
 		assertEquals(123, varasto.getSaldo(), vertailuTarkkuus);
@@ -41,7 +47,7 @@ public class VarastoTest {
     @Test
     public void uudellaVarastollaOikeaTilavuus() {
         assertEquals(10, varasto.getTilavuus(), vertailuTarkkuus);
-    }
+    }	
 
     @Test
     public void lisaysLisaaSaldoa() {
