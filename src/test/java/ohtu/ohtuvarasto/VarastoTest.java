@@ -103,4 +103,10 @@ public class VarastoTest {
         assertEquals(4, varasto.paljonkoMahtuu(), vertailuTarkkuus);
     }
 	
+	@Test
+    public void toStringOikein() {
+		String haluttu = varasto.toString();
+        assertEquals(haluttu, varasto.toString());
+    }
+	
 }
