@@ -1,7 +1,8 @@
-
 apply plugin: 'java'
 
 apply plugin: 'application'
+
+apply plugin: "jacoco" 
 
 repositories {
     jcenter()
@@ -16,4 +17,10 @@ mainClassName = 'ohtuesimerkki.Main'
 
 run {
     standardInput = System.in
+}
+
+jacocoTestReport {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
 }
